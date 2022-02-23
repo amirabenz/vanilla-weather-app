@@ -17,6 +17,8 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <script
       src="https://kit.fontawesome.com/778a1fe930.js"
       crossorigin="anonymous"
@@ -26,7 +28,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-12 another">
+        <div class="col-12">
           <form id="search-form">
             <input type="text" placeholder="search" id="searched-city" />
             <button type="submit" id="search-button">
@@ -37,8 +39,8 @@
             </button>
           </form>
         </div>
-        <div class="col-12 actual-city">San Francisco</div>
-        <div class="actual-date">Wed 07:29</div>
+        <div class="col-12 actual-city" id="here"></div>
+        <div class="actual-date"></div>
       </div>
 
       <div class="actual-icon">
@@ -49,8 +51,18 @@
         />
       </div>
       <div class="row today">
-        <div class="col-4 actual-temperature">16°</div>
-        <div class="col-8 other-infos">
+        <div class="col-6 actual-temperature">
+          <div class="row degree">
+            <div class="col-9 t">
+            <span id="temp"></span>
+            </div>
+              <div class="col-3 c">
+                  <a href="#" id="celsius">|  <strong>°C </strong></a>
+                  <br> <a href="#" id="fahrenheit"> °F </a></span>
+               </div>
+          </div>
+        </div>
+        <div class="col-5 other-infos">
           <ul>
             <li>
               Humidity

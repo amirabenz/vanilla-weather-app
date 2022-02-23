@@ -17,39 +17,75 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <script
+      src="https://kit.fontawesome.com/778a1fe930.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="src/style.css" />
   </head>
   <body>
     <div class="container">
-      <div class="actual-city">San Francisco</div>
-      <div class="actual-icon"></div>
+      <div class="row">
+        <div class="col-12 another">
+          <form id="search-form">
+            <input type="text" placeholder="search" id="searched-city" />
+            <button type="submit" id="search-button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button type="button" class="btn btn-outline-warning" id="here-now">
+              current location
+            </button>
+          </form>
+        </div>
+        <div class="col-12 actual-city">San Francisco</div>
+        <div class="actual-date">Wed 07:29</div>
+      </div>
+
+      <div class="actual-icon">
+        <img
+          src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+          alt=""
+          class="img-icon"
+        />
+      </div>
       <div class="row today">
-        <div class="col-6 actual-temperature">16°</div>
-        <div class="col-6 other-infos">
+        <div class="col-4 actual-temperature">16°</div>
+        <div class="col-8 other-infos">
           <ul>
-            <li class="humidity">Humidity:</li>
-            <li class="wind">Wind:</li>
+            <li>
+              Humidity
+              <div><span class="humidity">38</span>%</div>
+            </li>
+            <li>
+              Wind
+              <div><span class="wind">18 </span>km/h</div>
+            </li>
           </ul>
         </div>
       </div>
       <div class="row forecast">
-        <div class="col-3">
+        <div class="col-2 day-info">
           <div class="row day">Tom</div>
           <div class="row icon"></div>
           <div class="row temperature">10°</div>
         </div>
-        <div class="col-3">
+        <div class="col-2 day-info">
           <div class="row day">Fri</div>
           <div class="row icon"></div>
           <div class="row temperature">10°</div>
         </div>
-        <div class="col-3">
+        <div class="col-2 day-info">
           <div class="row day">Sat</div>
           <div class="row icon"></div>
           <div class="row temperature">10°</div>
         </div>
-        <div class="col-3">
+        <div class="col-2 day-info">
           <div class="row day">Sun</div>
+          <div class="row icon"></div>
+          <div class="row temperature">10°</div>
+        </div>
+        <div class="col-2 day-info">
+          <div class="row day">Mon</div>
           <div class="row icon"></div>
           <div class="row temperature">10°</div>
         </div>

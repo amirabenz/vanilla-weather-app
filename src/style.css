@@ -7,19 +7,24 @@ ul {
   font-size: 15px;
 
   text-align: center;
-  margin: 40px;
+  margin: 40px 0;
 }
 li {
   font-size: 12px;
   padding: 4px;
   background-color: rgba(255, 255, 255, 0.5);
-  margin: 10px;
+  margin: 10px 0px;
   border-radius: 10px;
   color: black;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 li div {
   font-size: 16px;
+}
+strong {
+  font-weight: 700;
+  color: #ffc107;
 }
 .container {
   background-color: lightslategray;
@@ -27,10 +32,15 @@ li div {
   text-align: center;
   padding: 20px;
   border-radius: 20px;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.5);
 }
 .actual-city {
   font-size: 30px;
   color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin: 10px 0;
+  background-color: rgb(140, 155, 170);
 }
 .actual-date {
   color: white;
@@ -41,11 +51,32 @@ li div {
 }
 .actual-temperature {
   text-align: center;
-  font-size: 120px;
+
   font-weight: 100;
-  position: relative;
-  left: 30px;
   color: white;
+}
+.degree {
+  font-size: 14px;
+  text-align: left;
+}
+#celsius,
+#fahrenheit {
+  text-decoration: none;
+  color: white;
+}
+#celsius:hover,
+#fahrenheit:hover {
+  color: #ffc107;
+}
+.c {
+  margin-top: 50px;
+}
+.t {
+  margin: 0;
+  text-align: right;
+}
+#temp {
+  font-size: 120px;
 }
 .day-info {
   border: 2px solid #ffc107;
@@ -53,19 +84,20 @@ li div {
   padding: 5px 20px;
   border-radius: 10px;
   color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
 }
 .day-info:hover {
   color: black;
   background-color: #ffc107;
+  margin: 0px 8px;
 }
 
-.other-infos {
-  text-align: left;
-}
 #searched-city {
   border: none;
   border-radius: 10px;
   padding: 6px 0 6px 6px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 #search-button {
   border: 2px solid #ffc107;
@@ -73,6 +105,8 @@ li div {
   color: white;
   background-color: transparent;
   margin: 5px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
 }
 #search-button:hover {
   background-color: #ffc107;
@@ -89,6 +123,8 @@ li div {
   font-weight: 400;
   margin: 10px;
   border-radius: 10px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
+  transition: all 200ms ease-in-out;
 }
 #here-now:hover {
   color: black;

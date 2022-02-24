@@ -28,11 +28,20 @@ strong {
   color: #ffc107;
 }
 footer {
-  font-family: "Dosis", sans-serif;
+  font-family: "Quicksand", sans-serif;
   text-align: center;
   padding: 10px;
   margin-bottom: 30px;
+  font-size: 14px;
 }
+#source-code {
+  text-decoration: none;
+  color: darkcyan;
+}
+#source-code:hover {
+  color: rgb(100, 161, 197);
+}
+
 .container {
   background-color: lightslategray;
   width: 500px;
@@ -88,6 +97,7 @@ footer {
 #temp {
   font-size: 120px;
 }
+
 .day-info {
   border: 2px solid #ffc107;
   margin: 8px;
@@ -139,14 +149,20 @@ footer {
 #here-now:hover {
   color: black;
 }
-.day,
-.icon,
-.temperature {
-  margin: 0 auto;
-}
+
 .day {
   font-size: 12px;
 }
 .temperature {
-  font-size: 20px;
+  font-size: 16px;
+}
+
+.max {
+  font-weight: 500;
+  padding: 1px;
+}
+.min {
+  font-weight: 100;
+  padding: 1px;
+  opacity: 0.7;
 }

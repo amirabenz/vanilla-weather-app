@@ -27,6 +27,12 @@ strong {
   font-weight: 700;
   color: #ffc107;
 }
+footer {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 30px;
+}
 .container {
   background-color: lightslategray;
   width: 500px;

@@ -12,17 +12,30 @@ if (minutes < 10) {
 }
 
 date.innerHTML = `${days[new Date().getDay()]} ${hours}:${minutes}`;
+
 function change(response) {
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
-  document.querySelector("#here").innerHTML = response.data.name;
+  document.querySelector(
+    "#here"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#searched-city").value = response.data.name;
-  console.log(response.data);
   document.querySelector(".wind").innerHTML = Math.round(
     response.data.wind.speed
   );
   document.querySelector(".humidity").innerHTML = response.data.main.humidity;
+  document.querySelector(".weather-description").innerHTML =
+    response.data.weather[0].main;
+  document
+    .querySelector(".img-icon")
+    .setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
+  document
+    .querySelector(".img-icon")
+    .setAttribute("alt", response.data.weather[0].description);
 }
 
 function showCurrentInfos(position) {

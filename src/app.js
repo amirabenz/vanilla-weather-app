@@ -1,6 +1,14 @@
 let date = document.querySelector(".actual-date");
 
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+let days = [
+  "Sunday",
+  "Monday",
+  "Tueday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
 let minutes = new Date().getMinutes();
 let hours = new Date().getHours();
 
@@ -10,6 +18,9 @@ if (hours < 10) {
 if (minutes < 10) {
   minutes = `0${minutes}`;
 }
+date.innerHTML = `Last updated: ${
+  days[new Date().getDay()]
+} ${hours}:${minutes}`;
 
 function convert(timeStamp) {
   weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -47,7 +58,7 @@ function showForecast(response) {
           </div>`;
   }
 }
-date.innerHTML = `${days[new Date().getDay()]} ${hours}:${minutes}`;
+
 function getForecastInfos(coordinates) {
   let apiKey = "7a3a06bc53009599c7a0058ddd4c4727";
   let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;

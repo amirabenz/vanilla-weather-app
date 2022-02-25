@@ -89,11 +89,10 @@ footer {
 }
 .c {
   margin-top: 50px;
+  padding: 20px;
 }
 .t {
-  margin: 0;
-  text-align: center;
-  padding: 0;
+  text-align: left;
 }
 #temp {
   font-size: 120px;

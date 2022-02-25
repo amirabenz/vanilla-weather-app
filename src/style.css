@@ -44,7 +44,7 @@ footer {
 
 .container {
   background-color: lightslategray;
-  width: 700px;
+  width: 500px;
   text-align: center;
   padding: 20px;
   border-radius: 20px;
@@ -101,8 +101,7 @@ footer {
 
 .day-info {
   border: 2px solid #ffc107;
-  margin: 4px;
-  padding: 5px 50px;
+  margin: 10px 4px;
   border-radius: 10px;
   color: white;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
@@ -111,7 +110,7 @@ footer {
 .day-info:hover {
   color: black;
   background-color: #ffc107;
-  margin: 0 8px;
+  margin: 0 4px;
 }
 .day-info:hover .day {
   color: black;
@@ -153,22 +152,27 @@ footer {
 #here-now:hover {
   color: black;
 }
-
+.forecast {
+  margin-left: 25px;
+}
 .day {
   font-size: 12px;
   color: #ffc107;
 }
 .temperature {
-  font-size: 10px;
+  font-size: 14px;
+  width: 60px;
+}
+.icon-forecast {
+  width: 40px;
+  margin: 0;
+  padding: 0;
 }
 
 .max {
   font-weight: 500;
-  padding: 1px;
-  text-align: center;
 }
 .min {
   font-weight: 100;
-  padding: 1px;
   opacity: 0.7;
 }

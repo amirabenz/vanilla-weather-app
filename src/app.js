@@ -65,7 +65,6 @@ function getForecastInfos(coordinates) {
   axios.get(url).then(showForecast);
 }
 function change(response) {
-  console.log(response.data);
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );

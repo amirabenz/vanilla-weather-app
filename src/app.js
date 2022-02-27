@@ -65,6 +65,7 @@ function getForecastInfos(coordinates) {
   axios.get(url).then(showForecast);
 }
 function change(response) {
+  console.log(response.data);
   document.querySelector("#temp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -114,6 +115,7 @@ function toFahrenheit(event) {
   axios.get(url).then(change);
   document.querySelector("#celsius").innerHTML = "°C ";
   document.querySelector("#fahrenheit").innerHTML = "| <strong> °F </strong>";
+  document.querySelector(".wind-unit").innerHTML = " mph";
 }
 let fahrenheit = document.querySelector("#fahrenheit");
 fahrenheit.addEventListener("click", toFahrenheit);
@@ -126,6 +128,7 @@ function toCelsius(event) {
   axios.get(url).then(change);
   document.querySelector("#celsius").innerHTML = "| <strong>°C </strong>";
   document.querySelector("#fahrenheit").innerHTML = " °F";
+  document.querySelector(".wind-unit").innerHTML = " m/s";
 }
 
 let celsius = document.querySelector("#celsius");
